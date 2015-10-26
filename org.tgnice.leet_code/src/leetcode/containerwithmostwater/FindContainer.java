@@ -4,9 +4,9 @@ public class FindContainer {
     public int maxArea(int[] height) {
     	int maxCapacity = 0;
     	int tmp = 0;
-    	int min;
-    	min = height[0] < height[height.length-1] ? height[0] : height[height.length-1];
-    	maxCapacity = min*(height.length-1);
+    	int minHeight;
+    	minHeight = height[0] < height[height.length-1] ? height[0] : height[height.length-1];
+    	maxCapacity = minHeight*(height.length-1);
     	int i =0;
     	int j = height.length-1;
     	while(i<j){
