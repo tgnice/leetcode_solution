@@ -10,11 +10,9 @@ public class RomanToInteger {
 	    public int getValue(){
 	    	return this.value;
 	    }
-	    
 	    public byte[] getAsByte(){
 	    	return this.toString().getBytes();
 	    }
-	    
 	};
 	
     public int romanToInt(String s) {
@@ -24,7 +22,6 @@ public class RomanToInteger {
         	for( RomanNeumeral r : RomanNeumeral.values()){
         		if( r.getAsByte().length == 2 && roman.length - i>= 2){
         			if(r.getAsByte()[0] == roman[i] && r.getAsByte()[1] == roman[i+1]){
-        				System.out.println(r);
         				converted = converted + r.getValue();
         				i++;
         				break;
@@ -32,7 +29,6 @@ public class RomanToInteger {
         		}
         		else if(r.getAsByte().length == 1){
         			if(r.getAsByte()[0] == roman[i] ){
-        				System.out.println(r);
         				converted = converted + r.getValue();
         				break;
         			}
@@ -45,6 +41,5 @@ public class RomanToInteger {
 	public static void main(String[] args){
 		RomanToInteger rti = new RomanToInteger();
 		System.out.println(rti.romanToInt("MDCCCLXXXIV"));
-		System.out.println((char)RomanNeumeral.C.getAsByte()[0]);
 	}
 }
