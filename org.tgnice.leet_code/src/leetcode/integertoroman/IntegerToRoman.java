@@ -53,12 +53,16 @@ public class IntegerToRoman {
 	};
 	public String intToRoman(int num) {
 	    StringBuilder roman = new StringBuilder();
-	    for (RomanNeumeral r:RomanNeumeral.values()) {
+	    for (RomanNeumeral r :RomanNeumeral.values()) {
 	        while (num>=r.getValue()) {
 	            roman.append(r);
 	            num = num - r.getValue();
 	        }
 	    }
 	    return roman.toString();
+	}
+	
+	public static void main(String[] args){
+		System.out.println(RomanNeumeral.C);
 	}
 }
