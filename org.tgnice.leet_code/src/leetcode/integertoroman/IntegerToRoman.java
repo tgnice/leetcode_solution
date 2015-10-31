@@ -63,6 +63,7 @@ public class IntegerToRoman {
 	}
 	
 	public static void main(String[] args){
-		System.out.println(RomanNeumeral.C);
+		IntegerToRoman itr = new IntegerToRoman();
+		System.out.println(itr.intToRoman(3999));
 	}
 }
