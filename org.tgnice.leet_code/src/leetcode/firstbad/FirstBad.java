@@ -12,7 +12,7 @@ public class FirstBad {
     	if(max <2){
     		return 1;
     	}else {
-	    	if(isBadVersion(current) == false && isBadVersion(current -1) == false){
+	    	if(isBadVersion(current) == false){
 	    		if(max-current == 1){
 	    			current = current +1;
 	    		}
@@ -20,7 +20,7 @@ public class FirstBad {
 	    	} else if(isBadVersion(current) == true && isBadVersion(current -1) == false){
 	    		return current;
 	    	} else {
-	    		return checkBad(max - current/2, current);
+	    		return checkBad(current - current/2, current);
 	    	}
     	}
     }
